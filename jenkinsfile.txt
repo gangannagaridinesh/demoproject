@@ -1,0 +1,51 @@
+pipeline{
+    agent any
+        stages{
+            stage('Git Checkout'){
+                steps{
+                   git credentialsId: 'dinu_git', url: 'https://github.com/gangannagaridinesh/demoproject.git'
+                }
+            }
+            stage('UNIT Testing'){
+                steps{
+                    sh 'mvn test '
+                }
+            }
+                stage('Integration testing'){
+                    steps{
+                        sh 'mvn verify -DskipUnitTests'
+            }                              
+                    }
+                    stage('Maven Build'){
+                        steps{
+                            sh 'mvn clean install'
+                            }
+                            }
+                        }
+                        
+                    }
+                
+        
+                                 
+                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+      
+            
