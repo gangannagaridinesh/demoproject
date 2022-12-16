@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage('Git Checkout'){
                 steps{
-                   git credentialsId: 'dinu_git', url: 'https://github.com/gangannagaridinesh/demoproject.git'
+                   git credentialsId: 'dinu_git', url: 'https://github.com/gangannagaridinesh/demoproject.git'branch:'master'
                 }
             }
             stage('UNIT Testing'){
