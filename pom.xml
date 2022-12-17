@@ -24,6 +24,10 @@
 		</dependency>
 
 	</dependencies>
+	<plugin>
+  <artifactId>maven-war-plugin</artifactId>
+  <version>3.0.0</version>
+</plugin>
 	
 	<distributionManagement>
 		 <snapshotRepository>
@@ -36,10 +40,7 @@
 		    <url>http://43.206.159.246:8081/repository/sample-releases/</url>
 		</repository>
   	</distributionManagement>
-	<plugin>
-  <artifactId>maven-war-plugin</artifactId>
-  <version>3.0.0</version>
-</plugin>
+	
 	<pluginRepositories>
 	    <pluginRepository>    
 		<id>maven1</id>
